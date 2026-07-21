@@ -11,6 +11,14 @@ button_frame.pack()
 def button_click(number):
     display.insert(tk.END,number)
 
+def calculate():
+    expression=display.get()
+    result=eval(expression)
+
+    display.delete(0, tk.END)
+    display.insert(tk.END, result)
+    
+
 button = tk.Button(button_frame,
  text="1",
 command=lambda:button_click(1),
@@ -34,7 +42,7 @@ button.grid(row=0,column=2)
 
 button=tk.Button(button_frame,
 text="%",
-command=lambda:button_click("%"),
+command=lambda:button_click("/"),
 width=9,
 height=4
 )
@@ -63,7 +71,7 @@ button.grid(row=1,column=2)
 
 button=tk.Button(button_frame,
 text="x",
-command=lambda:button_click("x"),
+command=lambda:button_click("*"),
 width=9,
 height=4
 )
@@ -116,7 +124,7 @@ button.grid(row=3,column=1)
 
 button=tk.Button(button_frame,
 text="=",
-command=lambda:button_click("="),
+command=calculate,
 width=9,
 height=4
 )
