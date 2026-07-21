@@ -77,8 +77,8 @@ height=4)
 button.grid(row=2,column=0)
 
 button = tk.Button(button_frame, 
-text="9", 
-command=lambda:button_click(9),
+text="8", 
+command=lambda:button_click(8),
 width=9,
 height=4)
 button.grid(row=2,column=1)
@@ -97,5 +97,37 @@ width=9,
 height=4
 )
 button.grid(row=2,column=3)
+
+button=tk.Button(button_frame,
+text="c",
+command=lambda:button_click("c"),
+width=9,
+height=4,
+)
+button.grid(row=3,column=0)
+
+button=tk.Button(button_frame,
+text="0",
+command=lambda:button_click("0"),
+width=9,
+height=4
+)
+button.grid(row=3,column=1)
+
+button=tk.Button(button_frame,
+text="=",
+command=lambda:button_click("="),
+width=9,
+height=4
+)
+button.grid(row=3, column=2)
+
+button=tk.Button(button_frame,
+text="+",
+command=lambda:button_click("+"),
+width=9,
+height=4
+)
+button.grid(row=3, column=3)
 
 window.mainloop()
