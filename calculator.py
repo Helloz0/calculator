@@ -2,7 +2,7 @@ import tkinter as tk
 window = tk.Tk()
 window.title("My Calculator")
 window.geometry("300x400")
-display = tk.Entry(window, font=("Arial", 20), justify="left")
+display = tk.Entry(window, font=("Arial", 20), justify="right")
 display.pack()
 
 button_frame=tk.Frame(window)
@@ -41,7 +41,7 @@ height=4)
 button.grid(row=0,column=2)
 
 button=tk.Button(button_frame,
-text="%",
+text="/",
 command=lambda:button_click("/"),
 width=9,
 height=4
@@ -70,7 +70,7 @@ height=4)
 button.grid(row=1,column=2)
 
 button=tk.Button(button_frame,
-text="x",
+text="*",
 command=lambda:button_click("*"),
 width=9,
 height=4
