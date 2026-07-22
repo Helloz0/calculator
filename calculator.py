@@ -8,6 +8,9 @@ display.pack()
 button_frame=tk.Frame(window)
 button_frame.pack()
 
+def cancel():
+    display.delete(0,tk.END)
+
 def button_click(number):
     display.insert(tk.END,number)
 
@@ -108,7 +111,7 @@ button.grid(row=2,column=3)
 
 button=tk.Button(button_frame,
 text="c",
-command=lambda:button_click("c"),
+command=cancel,
 width=9,
 height=4,
 )
